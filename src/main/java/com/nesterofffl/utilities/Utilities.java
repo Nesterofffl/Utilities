@@ -1,9 +1,16 @@
 package com.nesterofffl.utilities;
 
+import com.nesterofffl.utilities.block.ModBlocks;
+import com.nesterofffl.utilities.item.ModItemGroups;
+import com.nesterofffl.utilities.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
+import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 
 public class Utilities implements ModInitializer {
 	public static final String MOD_ID = "utilities";
@@ -15,10 +22,9 @@ public class Utilities implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		// This code runs as soon as Minecraft is in a mod-load-ready state.
-		// However, some things (like resources) may still be uninitialized.
-		// Proceed with mild caution.
 
-		LOGGER.info("Hello Fabric world!");
+		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
+		ModItemGroups.registerItemGroups();
 	}
 }
