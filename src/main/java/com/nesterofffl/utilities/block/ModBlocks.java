@@ -16,14 +16,17 @@ import net.minecraft.util.Identifier;
 public class ModBlocks {
 
 
-    public static final Block Coconut_Log = registerBlock("coconut_log", new Block(AbstractBlock.Settings.create()
-            .strength(2f).requiresTool().sounds(BlockSoundGroup.WOOD).registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Utilities.MOD_ID,"coconut_log")))));
+    public static final Block Coconut_Log = registerBlock("coconut_log", new Block(AbstractBlock.Settings.copy(Blocks.OAK_WOOD)
+            .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Utilities.MOD_ID,"coconut_log")))));
 
-    public static final Block Coconut_Planks = registerBlock("coconut_planks", new Block(AbstractBlock.Settings.create()
-            .strength(2f).requiresTool().sounds(BlockSoundGroup.WOOD).registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Utilities.MOD_ID,"coconut_planks")))));
+    public static final Block Coconut_Planks = registerBlock("coconut_planks", new Block(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)
+            .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Utilities.MOD_ID,"coconut_planks")))));
 
-    public static final Block Coconut_Leaves = registerBlock("coconut_leaves", new Block(AbstractBlock.Settings.create()
-            .strength(1f).sounds(BlockSoundGroup.CHERRY_LEAVES).registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Utilities.MOD_ID,"coconut_leaves")))));
+    public static final Block Coconut_Stripped_Log = registerBlock("coconut_stripped_log", new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_LOG)
+            .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Utilities.MOD_ID,"coconut_stripped_log")))));
+
+    public static final Block Coconut_Leaves = registerBlock("coconut_leaves", new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES)
+            .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Utilities.MOD_ID,"coconut_leaves")))));
 
 
     private static Block registerBlock(String name, Block block)
