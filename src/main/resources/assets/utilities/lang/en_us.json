@@ -2,5 +2,8 @@
   "item.utilities.art_leather": "Artificial Leather",
   "block.utilities.coconut_log": "Coconut Wood Log",
   "block.utilities.coconut_planks": "Coconut Wood Planks",
+  "block.utilities.coconut_leaves": "Coconut Leaves",
+
+
   "itemgroup.utilities.utilities_items": "Utilities Items"
 }
