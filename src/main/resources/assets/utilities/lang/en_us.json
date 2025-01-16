@@ -3,6 +3,10 @@
   "block.utilities.coconut_log": "Coconut Wood Log",
   "block.utilities.coconut_planks": "Coconut Wood Planks",
   "block.utilities.coconut_leaves": "Coconut Leaves",
+  "block.utilities.oasis_grass": "Oasis Grass",
+  "block.utilities.sandstone_bricks": "Sandstone Bricks",
+  "block.utilities.sanded_stone": "Sandy Stone",
+  "block.utilities.sanded_cobblestone": "Sandy Cobblestone",
 
 
   "itemgroup.utilities.utilities_items": "Utilities Items"

@@ -10,7 +10,6 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
-import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 
 public class ModBlocks {
@@ -28,6 +27,22 @@ public class ModBlocks {
     public static final Block Coconut_Leaves = registerBlock("coconut_leaves", new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES)
             .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Utilities.MOD_ID,"coconut_leaves")))));
 
+    public static final Block Oasis_Grass = registerBlock("oasis_grass", new Block(AbstractBlock.Settings.copy(Blocks.GRASS_BLOCK)
+            .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Utilities.MOD_ID,"oasis_grass")))));
+
+    public static final Block Sanded_Stone = registerBlock("sanded_stone", new Block(AbstractBlock.Settings.copy(Blocks.STONE).
+            registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Utilities.MOD_ID, "sanded_stone")))));
+
+    public static final Block Sanded_Cobblestone = registerBlock("sanded_cobblestone", new Block(AbstractBlock.Settings.copy(Blocks.COBBLESTONE).
+            registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Utilities.MOD_ID,"sanded_cobblestone")))));
+
+    public static final Block Sandstone_Bricks = registerBlock("sandstone_bricks", new Block(AbstractBlock.Settings.copy(Blocks.STONE_BRICKS).
+            registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Utilities.MOD_ID, "sandstone_bricks")))));
+
+
+
+
+
 
     private static Block registerBlock(String name, Block block)
     {
@@ -42,9 +57,20 @@ public class ModBlocks {
     }
 
     public static void registerModBlocks() {
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries ->
+        {
             entries.add(ModBlocks.Coconut_Log);
             entries.add(ModBlocks.Coconut_Planks);
+            entries.add(ModBlocks.Coconut_Stripped_Log);
+            entries.add(ModBlocks.Sandstone_Bricks);
+            entries.add(ModBlocks.Sanded_Stone);
+            entries.add(ModBlocks.Sanded_Cobblestone);
+
+        });
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(entries ->
+        {
+            entries.add(ModBlocks.Oasis_Grass);
             entries.add(ModBlocks.Coconut_Leaves);
         });
     }

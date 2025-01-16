@@ -3,7 +3,8 @@
 	"package": "com.nesterofffl.utilities.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"ExampleMixin"
+		"ExampleMixin",
+		"AbstractBlockMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

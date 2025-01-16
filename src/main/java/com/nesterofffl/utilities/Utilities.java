@@ -7,6 +7,7 @@ import net.fabricmc.api.ModInitializer;
 
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.server.world.BlockEvent;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,5 +27,7 @@ public class Utilities implements ModInitializer {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 		ModItemGroups.registerItemGroups();
+
+
 	}
 }
