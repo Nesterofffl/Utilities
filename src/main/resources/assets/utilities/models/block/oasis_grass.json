@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "end": "utilities:block/oasis_grass_block_top",
-    "side": "utilities:block/oasis_grass_block_side"
-  }
-}

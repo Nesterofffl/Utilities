@@ -10,25 +10,33 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 
 public class ModBlocks {
 
 
-    public static final Block Coconut_Log = registerBlock("coconut_log", new Block(AbstractBlock.Settings.copy(Blocks.OAK_WOOD)
+    public static final Block Coconut_Log = registerBlock("coconut_log", new PillarBlock(AbstractBlock.Settings.create().sounds(BlockSoundGroup.BAMBOO_WOOD)
             .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Utilities.MOD_ID,"coconut_log")))));
 
     public static final Block Coconut_Planks = registerBlock("coconut_planks", new Block(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)
             .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Utilities.MOD_ID,"coconut_planks")))));
 
-    public static final Block Coconut_Stripped_Log = registerBlock("coconut_stripped_log", new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_LOG)
-            .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Utilities.MOD_ID,"coconut_stripped_log")))));
+
+    public static final Block Coconut_Wood = registerBlock("coconut_wood", new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_WOOD)
+            .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Utilities.MOD_ID,"coconut_wood")))));
+
+    public static final Block Stripped_Coconut_Log = registerBlock("stripped_coconut_log", new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_WOOD)
+            .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Utilities.MOD_ID,"stripped_coconut_log")))));
+
 
     public static final Block Coconut_Leaves = registerBlock("coconut_leaves", new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES)
             .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Utilities.MOD_ID,"coconut_leaves")))));
 
     public static final Block Oasis_Grass = registerBlock("oasis_grass", new Block(AbstractBlock.Settings.copy(Blocks.GRASS_BLOCK)
             .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Utilities.MOD_ID,"oasis_grass")))));
+
+
 
     public static final Block Sanded_Stone = registerBlock("sanded_stone", new Block(AbstractBlock.Settings.copy(Blocks.STONE).
             registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Utilities.MOD_ID, "sanded_stone")))));
@@ -61,7 +69,7 @@ public class ModBlocks {
         {
             entries.add(ModBlocks.Coconut_Log);
             entries.add(ModBlocks.Coconut_Planks);
-            entries.add(ModBlocks.Coconut_Stripped_Log);
+            //entries.add(ModBlocks.Coconut_Stripped_Log);
             entries.add(ModBlocks.Sandstone_Bricks);
             entries.add(ModBlocks.Sanded_Stone);
             entries.add(ModBlocks.Sanded_Cobblestone);

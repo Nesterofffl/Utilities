@@ -31,9 +31,27 @@ public class AbstractBlockMixin {
     @Inject(method = "randomTick", at = @At(value = "HEAD"))
     protected void randomTick(ServerWorld serverWorld, BlockPos blockPos, Random random, CallbackInfo ci) {
         if (Blocks.SAND.equals(this.getBlock())) {
+            var dirs = new BlockPos[] {
+                    blockPos.north(),
+                    blockPos.south(),
+                    blockPos.west(),
+                    blockPos.east(),
+                    blockPos.up(),
+                    blockPos.down()
+            };
 
-            serverWorld.setBlockState(blockPos.add(1,0,0), ModBlocks.Sanded_Stone.getDefaultState());
+            for (var dir : dirs) {
+                // Тут можешь отрегулировать шанс.
+                var roll = random.nextFloat();
 
+                // Если в этом рандом-тике выпало 0-0.75, пропуск (25% шанс стать твоей хуйнёй хз)
+                if (roll <= 0.5f) continue;
+
+                var block = serverWorld.getBlockState(dir);
+                if (block.isOf(Blocks.STONE)) {
+                    serverWorld.setBlockState(dir, ModBlocks.Sanded_Stone.getDefaultState());
+                }
+            }
         }
 
     }
