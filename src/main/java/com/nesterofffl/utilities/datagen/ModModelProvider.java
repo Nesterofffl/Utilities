@@ -24,9 +24,9 @@ public class ModModelProvider extends FabricModelProvider
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.Sanded_Cobblestone);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.Coconut_Planks);
         blockStateModelGenerator.registerLog(ModBlocks.Coconut_Log).log(ModBlocks.Coconut_Log).wood(ModBlocks.Coconut_Wood);
-        blockStateModelGenerator.registerLog(ModBlocks.Stripped_Coconut_Log).log(ModBlocks.Stripped_Coconut_Log);
+        blockStateModelGenerator.registerLog(ModBlocks.Stripped_Coconut_Log).log(ModBlocks.Stripped_Coconut_Log).wood(ModBlocks.Stripped_Coconut_Wood);
         blockStateModelGenerator.registerSingleton(ModBlocks.Coconut_Leaves, TexturedModel.LEAVES);
-        //blockStateModelGenerator.registerGrassTinted(ModBlocks.Oasis_Grass);
+        blockStateModelGenerator.registerSingleton(ModBlocks.Oasis_Grass, TexturedModel.CUBE_TOP);
 
     }
 

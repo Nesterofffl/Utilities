@@ -26,14 +26,17 @@ public class ModBlocks {
     public static final Block Coconut_Wood = registerBlock("coconut_wood", new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_WOOD)
             .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Utilities.MOD_ID,"coconut_wood")))));
 
-    public static final Block Stripped_Coconut_Log = registerBlock("stripped_coconut_log", new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_WOOD)
+    public static final Block Stripped_Coconut_Log = registerBlock("stripped_coconut_log", new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_LOG)
             .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Utilities.MOD_ID,"stripped_coconut_log")))));
 
+
+    public static final Block Stripped_Coconut_Wood = registerBlock("stripped_coconut_wood", new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_WOOD)
+            .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Utilities.MOD_ID,"stripped_coconut_wood")))));
 
     public static final Block Coconut_Leaves = registerBlock("coconut_leaves", new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES)
             .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Utilities.MOD_ID,"coconut_leaves")))));
 
-    public static final Block Oasis_Grass = registerBlock("oasis_grass", new Block(AbstractBlock.Settings.copy(Blocks.GRASS_BLOCK)
+    public static final Block Oasis_Grass = registerBlock("oasis_grass", new GrassBlock(AbstractBlock.Settings.copy(Blocks.GRASS_BLOCK)
             .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Utilities.MOD_ID,"oasis_grass")))));
 
 

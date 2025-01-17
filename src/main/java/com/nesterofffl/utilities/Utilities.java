@@ -5,6 +5,7 @@ import com.nesterofffl.utilities.item.ModItemGroups;
 import com.nesterofffl.utilities.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.server.world.BlockEvent;
@@ -28,6 +29,7 @@ public class Utilities implements ModInitializer {
 		ModBlocks.registerModBlocks();
 		ModItemGroups.registerItemGroups();
 
-
+		StrippableBlockRegistry.register(ModBlocks.Coconut_Log, ModBlocks.Stripped_Coconut_Log);
+		StrippableBlockRegistry.register(ModBlocks.Coconut_Wood, ModBlocks.Stripped_Coconut_Wood);
 	}
 }
